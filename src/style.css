@@ -29,3 +29,6 @@ div {
   font-size: 30px;
   color: gray;
 }
+li {
+  display: inline;
+}
