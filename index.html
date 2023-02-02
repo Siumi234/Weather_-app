@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Weather_app/structure</title>
-    <meta charset="UTF-8" />
-    <link href="src/style.css" />
-    
-    
-      <style src="src/style.css"></style>
-      <script src="https://kit.fontawesome.com/290886e2a3.js" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-      <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-      <style> @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap'); </style>
-  </head>
 
-  <body>
-    
-    <form>
-      <input type="search" placeholder="Enter City" />
-      <button>search</button>
-      <button>Current city</button>
-    </form>
-    <h1>Milan</h1>
-    <h2>Thursday 16:00</br>Partly cloudy</h2>
-    <h3>13°C
-    
-    <i class="fa-solid fa-sun sun-icon"></i>
-    </h3>
-    <div class="container">
+<head>
+  <title>Weather_app/structure</title>
+  <meta charset="UTF-8" />
+  <script src="https://kit.fontawesome.com/290886e2a3.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+  </style>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link href="src/style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <form id="search-form">
+    <input id="city-input" type="search" placeholder="Enter City" />
+    <button>search</button>
+    <button id="current-location-button">Current city</button>
+  </form>
+  <h1 id="city">Milan</h1>
+  <h2 id="date">Thursday 16:00</br>Partly cloudy</h2>
+  <h3><span id="temperature">13</span>°C</h3>
+  <p id="description"></p>
+  <i class="fa-solid fa-sun sun-icon"></i>
+  <div class="container">
     <div class="row">
       <div class="col-2">
         Fri</br> <i class="fa-solid fa-cloud-rain"></i></br>9°
@@ -44,11 +48,12 @@
         Tue</br><i class="fa-solid fa-sun sunny"></i> </br>11°
       </div>
     </div>
-    </div>
-<a href="https://github.com/Siumi234/Weather_-app/tree/master/index.html">Go to Github</a>
-    
-    
+  </div>
+  <a href="https://github.com/Siumi234/Weather_-app/tree/master/index.html">Go to Github</a>
 
-    <script src="src/script.js"></script>
-  </body>
+
+
+  <script src="src/script.js"></script>
+</body>
+
 </html>

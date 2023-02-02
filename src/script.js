@@ -18,11 +18,12 @@ function formatDate(date) {
     "Friday",
     "Saturday",
   ];
+  let day = days[dayIndex];
   return `${day} ${hours}:${minutes}`;
 }
 function displayWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("temperature").innerHTML = Math.round(
+  document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
   document.querySelector("#description").innerHTML =
@@ -36,7 +37,7 @@ function searchCity(city) {
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input");
-  searchCity();
+  searchCity(city.value);
 }
 function searchLocation(position) {
   let apiKey = "f09d3949047ab6c9e3bcaf79cf61f619";
